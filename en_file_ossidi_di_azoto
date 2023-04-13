@@ -1,0 +1,30 @@
+library(raster)
+setwd("c:/lab/en/en")
+#importing a file
+en_1<-raster("en_0001.png")
+cl<-color<rampPalette(c("red","orange","yellow")(100)
+plot(en_1,col=cl)
+rlist<-list.files(pattern="en")
+rimport<-lapply(rlist,raster)
+plot(import)
+en<-stack(rimport)
+plot(en)
+par(mfrow=c(1,2)
+plot(en_1,col=cl)
+plot(en[[1]],col=cl)
+plot(en[[13]],col=cl)
+
+# check 2
+difen<-en[[1]] - en[[13]]
+plot(difen,col=cldif)
+
+
+difen<-en[[1]]-en[[13]]
+cldif<-colorRampPalette(c("blu","white","red"))(100)
+plot(difen,col=cldif)
+
+plotrgb(en,r=1,g=7,b=13,stretch="lin") #plot rgb
+plotrgb(en,r=1,g=7,b=13,stretch="hist") 
+
+finora install packages pescavano in R a scala globale
+se il pacchetto fosse su git-hub, ma serve devtools 
